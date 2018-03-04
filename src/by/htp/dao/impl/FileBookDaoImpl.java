@@ -49,8 +49,6 @@ public class FileBookDaoImpl implements BookDao {
 			String str = null;
 			int i = 0; // books counter
 			String[] words;
-			int j = 0; // words counter
-
 			while ((str = br.readLine()) != null) {
 				words = str.split(" ");
 				Book book = createBook(i+1, words[0], Integer.parseInt(words[1]));				
@@ -64,5 +62,4 @@ public class FileBookDaoImpl implements BookDao {
 
 		return books;
 	}
-
 }
