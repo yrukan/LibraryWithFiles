@@ -11,11 +11,12 @@ public class LibrarianMain {
 		
 		LibraryService service = new CityLibraryServiceImpl();
 		Catalog booksCatalog = service.getMainCatalog();
-		viewCatalogInfo(booksCatalog);
+		viewCatalogInfo(booksCatalog);		
 
 	}
 	
 	private static void viewCatalogInfo(Catalog catalog){
+		System.out.println(catalog.getTitle());
 		for(Book book : catalog.getBooks()){
 			System.out.println(book);
 		}
